@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Doto';
+}
+
+.py-2 p {
+    font-family: 'M PLUS 1 Code';
+}
+
+nav.site-header {
+    background-color: #333; 
+    padding: 10px 0;
+    display:flex;
+    flex-direction: left;
+}
+
+nav.site-header a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav.site-header a:hover {
+    color: #f8f9fa; 
+}
+
+.container {
+    position: relative; /*positionera både ramen och fotot relativt till varandra */
+}
+
+.frame {
+    width: 240px; 
+    height: 240px;
+    padding: 20px;
+    background-color: #fff;
+    border: 5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20px; /* Flytta ramen nedåt */
+    left: 20px; /* Flytta ramen åt höger */
+    z-index: 0; /* Placera ramen bakom fotot */
+}
+
+.portrait {
+    width: 220px; /* Anpassa fotots bredd så att det passar ramen */
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1; /* Placera fotot ovanpå ramen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.d-md-flex {
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.bg-dark, .bg-light {
+    flex: 1; 
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    margin-top: 5%;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
